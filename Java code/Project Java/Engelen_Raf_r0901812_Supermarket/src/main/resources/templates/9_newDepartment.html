@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new department</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new department</h2>
+        <form action="submitNewDepartment">
+
+            <p>
+                <label for = "departmentName">Name department:</label>
+                <input type="text" name = "departmentName" id = "departmentName">
+            </p>
+
+            <p>
+                <label for = "photo">Photo:</label>
+                <input type="text" name = "photo" id = "photo">
+            </p>
+
+            <p>
+                <label for="refrigerated">Refrigerated:</label>
+                <input type="checkbox" name="refrigerated" id="refrigerated">
+            </p>
+
+            <p>
+                <select name="supermarketIndex">
+                    <option value="-1">In which supermarket?</option>
+                    <option th:each = "supermarket : ${supermarketArrayList}"
+                            th:text = "${supermarket.getName()}"
+                            th:value="${supermarketStat.index}"
+                            id = "supermarketIndex"></option>
+                </select>
+            </p>
+
+            <p>
+                <select name="responsibleIndex">
+                    <option value="-1">Who is responsible for this department?</option>
+                    <option th:each = "staff : ${staffArrayList}"
+                            th:text = "${staff.getFirstName()} + ' ' + ${staff.getSurName()}"
+                            th:value = "${staffStat.index}"
+                            id = "responsibleIndex">
+                    </option>
+                </select>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewDepartment" value = "Confirm department">
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>

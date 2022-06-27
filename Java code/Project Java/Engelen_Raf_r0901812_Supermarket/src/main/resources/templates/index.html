@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket project</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h1>Java Project: Supermarket</h1>
+        <p><a href="/1_newCustomer">New customer</a></p>
+        <p><a href="/3_newStaff">New staff member</a></p>
+        <p><a href="/5_staffMembersList">All our staff members</a></p>
+        <p><a href="/6_customersList">All our customers</a></p>
+        <p><a href="/7_newSupermarket">New supermarket</a></p>
+        <p><a href="/8_supermarketList">List of supermarkets</a></p>
+        <p><a href="/9_newDepartment">New department</a></p>
+
+        <form action="searchDepartment">
+            <p>
+                <label for="departmentName">Department name:</label>
+                <input type="search" name = "departmentName" id = "departmentName">
+            </p>
+
+            <p>
+                <input type="submit" name = "searchDepartment" value = "Search department">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</div>
+
+</body>
+</html>

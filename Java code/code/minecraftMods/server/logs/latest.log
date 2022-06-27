@@ -1,0 +1,173 @@
+[16:27:31] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:27:33] [Worker-Main-1/INFO]: Loaded 7 recipes
+[16:27:36] [Server thread/INFO]: Starting minecraft server version 1.18.2
+[16:27:36] [Server thread/INFO]: Loading properties
+[16:27:36] [Server thread/INFO]: This server is running Paper version git-Paper-311 (MC: 1.18.2) (Implementing API version 1.18.2-R0.1-SNAPSHOT) (Git: d70ac03)
+[16:27:36] [Server thread/INFO]: Using 4 threads for Netty based IO
+[16:27:36] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[16:27:36] [Server thread/INFO]: Default game type: SURVIVAL
+[16:27:36] [Server thread/INFO]: Generating keypair
+[16:27:36] [Server thread/INFO]: Starting Minecraft server on *:25565
+[16:27:37] [Server thread/INFO]: Using default channel type
+[16:27:37] [Server thread/INFO]: Paper: Using Java 11 compression from Velocity.
+[16:27:37] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[16:27:37] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[16:27:37] [Server thread/INFO]: Preparing level "world"
+[16:27:43] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[16:27:43] [Server thread/INFO]: Time elapsed: 243 ms
+[16:27:43] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[16:27:44] [Server thread/INFO]: Time elapsed: 123 ms
+[16:27:44] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[16:27:44] [Server thread/INFO]: Time elapsed: 191 ms
+[16:27:44] [Server thread/INFO]: Running delayed init tasks
+[16:27:44] [Server thread/INFO]: Done (7.926s)! For help, type "help"
+[16:27:44] [Server thread/INFO]: Timings Reset
+[16:40:49] [User Authenticator #1/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[16:40:50] [Server thread/INFO]: The_G_Raf joined the game
+[16:40:50] [Server thread/INFO]: The_G_Raf[/127.0.0.1:52210] logged in with entity id 205 at ([world]36.5, 69.0, -60.5)
+[16:41:08] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[16:41:08] [Server thread/INFO]: The_G_Raf left the game
+[16:55:20] [User Authenticator #2/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[16:55:20] [Server thread/INFO]: The_G_Raf joined the game
+[16:55:20] [Server thread/INFO]: The_G_Raf[/127.0.0.1:52262] logged in with entity id 337 at ([world]36.5, 69.0, -60.5)
+[16:55:36] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[16:55:36] [Server thread/INFO]: The_G_Raf left the game
+[17:11:36] [User Authenticator #3/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:11:37] [Server thread/INFO]: The_G_Raf joined the game
+[17:11:37] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50981] logged in with entity id 401 at ([world]36.5, 69.0, -60.5)
+[17:11:42] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:11:42] [Server thread/INFO]: The_G_Raf left the game
+[17:12:21] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:12:21] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:12:21] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:12:21] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:12:22] [Server thread/INFO]: Loaded 7 recipes
+[17:12:23] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:12:23] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:12:23] [Server thread/INFO]: Timings Reset
+[17:12:30] [User Authenticator #3/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:12:30] [Server thread/INFO]: The_G_Raf joined the game
+[17:12:30] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50995] logged in with entity id 433 at ([world]36.5, 69.0, -60.5)
+[17:12:35] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:12:35] [Server thread/INFO]: The_G_Raf left the game
+[17:21:18] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:21:18] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:21:18] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:21:18] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:21:19] [Server thread/INFO]: Loaded 7 recipes
+[17:21:20] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:21:20] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:21:20] [Server thread/INFO]: Timings Reset
+[17:21:25] [User Authenticator #4/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:21:25] [Server thread/INFO]: The_G_Raf joined the game
+[17:21:25] [Server thread/INFO]: The_G_Raf[/127.0.0.1:61862] logged in with entity id 463 at ([world]36.5, 69.0, -60.5)
+[17:21:32] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:21:32] [Server thread/INFO]: The_G_Raf left the game
+[17:27:59] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:27:59] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:27:59] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:27:59] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:28:00] [Server thread/INFO]: Loaded 7 recipes
+[17:28:00] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:28:00] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:28:00] [Server thread/INFO]: Timings Reset
+[17:28:04] [User Authenticator #5/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:28:04] [Server thread/INFO]: The_G_Raf joined the game
+[17:28:04] [Server thread/INFO]: The_G_Raf[/127.0.0.1:49802] logged in with entity id 494 at ([world]36.5, 69.0, -60.5)
+[17:28:14] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:28:14] [Server thread/INFO]: The_G_Raf left the game
+[17:38:43] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:38:43] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:38:43] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:38:43] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:38:43] [Server thread/INFO]: Loaded 7 recipes
+[17:38:44] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:38:44] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:38:44] [Server thread/INFO]: Timings Reset
+[17:38:50] [User Authenticator #6/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:38:50] [Server thread/INFO]: The_G_Raf joined the game
+[17:38:50] [Server thread/INFO]: The_G_Raf[/127.0.0.1:49874] logged in with entity id 543 at ([world]35.581097249945444, 67.0, -66.46475814543057)
+[17:38:56] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:38:56] [Server thread/INFO]: The_G_Raf left the game
+[17:46:49] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:46:49] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:46:49] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:46:49] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:46:49] [Server thread/INFO]: Loaded 7 recipes
+[17:46:50] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:46:50] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:46:50] [Server thread/INFO]: Timings Reset
+[17:47:01] [User Authenticator #7/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:47:01] [Server thread/INFO]: The_G_Raf joined the game
+[17:47:01] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50591] logged in with entity id 570 at ([world]35.581097249945444, 67.0, -66.46475814543057)
+[17:47:08] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:47:08] [Server thread/INFO]: The_G_Raf left the game
+[17:50:48] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:50:48] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:50:48] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:50:48] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:50:49] [Server thread/INFO]: Loaded 7 recipes
+[17:50:49] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:50:49] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:50:49] [Server thread/INFO]: Timings Reset
+[17:51:01] [User Authenticator #8/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:51:01] [Server thread/INFO]: The_G_Raf joined the game
+[17:51:01] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50629] logged in with entity id 594 at ([world]35.581097249945444, 67.0, -66.46475814543057)
+[17:51:07] [Server thread/INFO]: The_G_Raf issued server command: /getpencil
+[17:51:14] [Server thread/INFO]: The_G_Raf issued server command: /getPencil
+[17:51:52] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:51:52] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:51:52] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:51:52] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:51:53] [Server thread/INFO]: Loaded 7 recipes
+[17:51:53] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:51:53] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:51:53] [Server thread/INFO]: Timings Reset
+[17:52:00] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:52:00] [Server thread/INFO]: The_G_Raf left the game
+[17:52:51] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:52:51] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:52:51] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:52:51] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:52:52] [Server thread/INFO]: Loaded 7 recipes
+[17:52:53] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:52:53] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:52:53] [Server thread/INFO]: Timings Reset
+[17:53:11] [User Authenticator #9/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:53:12] [Server thread/INFO]: The_G_Raf joined the game
+[17:53:12] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50658] logged in with entity id 714 at ([world]35.558896030440934, 67.0, -65.91358966379978)
+[17:53:49] [Server thread/INFO]: The_G_Raf was slain by Spider
+[17:59:36] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[17:59:36] [Server thread/INFO]: The_G_Raf left the game
+[17:59:42] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[17:59:42] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[17:59:42] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:59:42] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:59:42] [Server thread/INFO]: Loaded 7 recipes
+[17:59:43] [Server thread/INFO]: [Paper_plugin] Loading Paper_plugin v1.0-SNAPSHOT
+[17:59:43] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:59:43] [Server thread/INFO]: [Paper_plugin] Enabling Paper_plugin v1.0-SNAPSHOT
+[17:59:43] [Server thread/INFO]: CONSOLE: Reload complete.
+[17:59:43] [Server thread/INFO]: Timings Reset
+[17:59:49] [User Authenticator #10/INFO]: UUID of player The_G_Raf is cabb0c96-70c2-4e2a-b649-d03cfb77e86c
+[17:59:49] [Server thread/INFO]: The_G_Raf joined the game
+[17:59:49] [Server thread/INFO]: The_G_Raf[/127.0.0.1:50702] logged in with entity id 1423 at ([world]27.627756118581466, 75.0, -67.74444923639854)
+[17:59:58] [Server thread/INFO]: The_G_Raf issued server command: /getp
+[18:00:03] [Server thread/INFO]: The_G_Raf issued server command: /getpencil
+[18:00:46] [Server thread/INFO]: The_G_Raf lost connection: Disconnected
+[18:00:46] [Server thread/INFO]: The_G_Raf left the game
+[18:01:09] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 5584ms or 111 ticks behind
+[18:01:48] [Server thread/INFO]: Stopping server
+[18:01:48] [Server thread/INFO]: [Paper_plugin] Disabling Paper_plugin v1.0-SNAPSHOT
+[18:01:48] [Server thread/INFO]: Saving players
+[18:01:48] [Server thread/INFO]: Saving worlds
+[18:01:48] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[18:01:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[18:01:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[18:01:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[18:01:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18:01:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18:01:52] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18:01:52] [Server thread/INFO]: Flushing Chunk IO
+[18:01:52] [Server thread/INFO]: Closing Thread Pool
+[18:01:52] [Server thread/INFO]: Closing Server

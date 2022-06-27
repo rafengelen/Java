@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new supermarket</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new supermarket</h2>
+        <form action="submitNewSupermarket">
+
+            <p>
+                <label for = "supermarketName">Name supermarket:</label>
+                <input type="text" name = "supermarketName" id = "supermarketName">
+            </p>
+            <!--Added with exam-->
+            <p>
+                <select name="staffIndex" id="staffIndex">
+                    <option value="-1">Choose a general manager</option>
+                    <option th:each="staff : ${staffArrayList}"
+                            th:value="${staffStat.index}"
+                            th:text="${staff.getFirstName()} + ' '+ ${staff.getSurName()}">
+                    </option>
+                </select>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewSupermarket" value = "Confirm supermarket">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new staff</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new staff member</h2>
+        <form action="submitNewStaff">
+            <p>
+                <label for = "firstName">First name:</label>
+                <input type = "text" name = "firstName" id = "firstName" >
+            </p>
+
+            <p>
+                <label for = "surName">Surname:</label>
+                <input type = "text" name = "surName" id = "surName" >
+            </p>
+
+            <p>
+                <label for = "employedSince">Employed since (dd/mm/yyyy):</label>
+                <input type = "String" name = "employedSince" id = "employedSince" pattern= "\d{2}/\d{2}/\d{4}">
+            </p>
+
+            <p>
+                <input type = "checkbox" name = "student" id = "student" >
+                <label for = "student">Working student?</label>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewStaff" value = "Confirm staff member">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>

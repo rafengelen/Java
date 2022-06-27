@@ -1,0 +1,1027 @@
+================================================================================================================================================
+Name and first name: Engelen Raf
+Student number: r0901812
+Java class: 1ITF02
+================================================================================================================================================
+Give the correct name of your html-files. So replace 1_xxx.html by the name you gave!
+Place your code in the correct fields. To do so, go to the requested file and copy/paste everything via CtrlA - CtrlC - CtrlV. 
+If you do not have a certain page, write there: NOT COMPLETED.
+================================================================================================================================================
+------------------------------------------------------------------------------------------------------------------------------------------------
+index.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket project</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h1>Java Project: Supermarket</h1>
+        <p><a href="/1_newCustomer">New customer</a></p>
+        <p><a href="/3_newStaff">New staff member</a></p>
+        <p><a href="/5_staffMembersList">All our staff members</a></p>
+        <p><a href="/6_customersList">All our customers</a></p>
+        <p><a href="/7_newSupermarket">New supermarket</a></p>
+        <p><a href="/8_supermarketList">List of supermarkets</a></p>
+        <p><a href="/9_newDepartment">New department</a></p>
+
+        <form action="searchDepartment">
+            <p>
+                <label for="departmentName">Department name:</label>
+                <input type="search" name = "departmentName" id = "departmentName">
+            </p>
+
+            <p>
+                <input type="submit" name = "searchDepartment" value = "Search department">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+1_newCustomer.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new customer</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new customer</h2>
+        <form action="submitNewCustomer">
+            <p>
+                <label for = "firstName">First name:</label>
+                <input type = "text" name = "firstName" id = "firstName" >
+            </p>
+
+            <p>
+                <label for = "surName">Surname:</label>
+                <input type = "text" name = "surName" id = "surName" >
+            </p>
+
+            <p>
+                <label for = "yearOfBirth">Year of birth:</label>
+                <input type = "text" name = "yearOfBirth" id = "yearOfBirth" >
+            </p>
+
+            <p th:each = "supermarket : ${supermarketArrayList}">
+                <input type="radio" name = "supermarketIndex" th:value = "${supermarketStat.index}" th:id = "${supermarketStat.index}" th:checked="${supermarketStat.index} == 0">
+                <label th:for = "${supermarketStat.index}" th:text = "${supermarket.getName()}"></label>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewCustomer" value = "Continue and generate cardnumber">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+2_welcomeCustomer.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome customer</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2 th:text = "'Welcome ' + ${customer.toString()}"></h2>
+
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+3_newStaff.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new staff</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new staff member</h2>
+        <form action="submitNewStaff">
+            <p>
+                <label for = "firstName">First name:</label>
+                <input type = "text" name = "firstName" id = "firstName" >
+            </p>
+
+            <p>
+                <label for = "surName">Surname:</label>
+                <input type = "text" name = "surName" id = "surName" >
+            </p>
+
+            <p>
+                <label for = "employedSince">Employed since (dd/mm/yyyy):</label>
+                <input type = "String" name = "employedSince" id = "employedSince" pattern= "\d{2}/\d{2}/\d{4}">
+            </p>
+
+            <p>
+                <input type = "checkbox" name = "student" id = "student" >
+                <label for = "student">Working student?</label>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewStaff" value = "Confirm staff member">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+4_welcomeStaff.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome staff member</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span id="headerName">Raf Engelen</span><span id="headerNumber">r0901812</span><span id="headerClass">1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2 th:text = "${staff.toString()}"></h2>
+
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+5_staffMembersList.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff members</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+    <div>
+        <header>
+            <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+        </header>
+        <main>
+            <h2>Our staff:</h2>
+
+            <ul>
+                <li th:each="staff : ${staffArrayList}">
+                    <span th:text="${staff.toString()}"/>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <a href="/">Back to homepage</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+6_customersList.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our customers</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+    <main>
+        <h2>Our customers:</h2>
+
+        <ol>
+            <li th:each = "customer : ${customerArrayList}">
+                <span th:text="${customer.getFirstName()} + ' ' + ${customer.getSurName()}"/>
+                <ul>
+                    <li th:text="'year of birth: ' + ${customer.getYearOfBirth()}"></li>
+                    <li th:text="'cardnumber: ' + ${customer.getCardNumber()}"></li>
+                    <li> shopping list:
+                        <ul>
+                            <li th:each = "product : ${customer.getShoppingList()}">
+                                <span th:text = "${product}"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+    </main>
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+7_newSupermarket.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new supermarket</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new supermarket</h2>
+        <form action="submitNewSupermarket">
+
+            <p>
+                <label for = "supermarketName">Name supermarket:</label>
+                <input type="text" name = "supermarketName" id = "supermarketName">
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewSupermarket" value = "Confirm supermarket">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+8_supermarketList.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarkets</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+    <main>
+        <h2>Supermarkets (and number of departments):</h2>
+
+        <ul>
+            <li th:each = "supermarket : ${supermarketArrayList}">
+                <a th:href = "@{/10_departmentsOfSupermarket(supermarketIndex = ${supermarketStat.index})}"
+                   th:text = "${supermarket.getName()} + ' (' + ${supermarket.getNumberOfDepartments()} + ')'"></a>
+            </li>
+        </ul>
+
+    </main>
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+9_newDepartment.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new department</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new department</h2>
+        <form action="submitNewDepartment">
+
+            <p>
+                <label for = "departmentName">Name department:</label>
+                <input type="text" name = "departmentName" id = "departmentName">
+            </p>
+
+            <p>
+                <label for = "photo">Photo:</label>
+                <input type="text" name = "photo" id = "photo">
+            </p>
+
+            <p>
+                <label for="refrigerated">Refrigerated:</label>
+                <input type="checkbox" name="refrigerated" id="refrigerated">
+            </p>
+
+            <p>
+                <select name="supermarketIndex">
+                    <option value="-1">In which supermarket?</option>
+                    <option th:each = "supermarket : ${supermarketArrayList}"
+                            th:text = "${supermarket.getName()}"
+                            th:value="${supermarketStat.index}"
+                            id = "supermarketIndex"></option>
+                </select>
+            </p>
+
+            <p>
+                <select name="responsibleIndex">
+                    <option value="-1">Who is responsible for this department?</option>
+                    <option th:each = "staff : ${staffArrayList}"
+                            th:text = "${staff.getFirstName()} + ' ' + ${staff.getSurName()}"
+                            th:value = "${staffStat.index}"
+                            id = "responsibleIndex">
+                    </option>
+                </select>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewDepartment" value = "Confirm department">
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+10_departmentsOfSupermarket.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text = "'Departments of ' + ${supermarket.getName()}"></title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2 th:text = "'Departments of ' + ${supermarket.getName()}"></h2>
+
+        <ol>
+            <li th:each="department : ${supermarket.getDepartmentList()}">
+                <span th:text="${department.getName()} + ' - '"/>
+                <span th:if="${department.isRefrigerated()}">Refrigerated department</span>
+                <span th:if="!${department.isRefrigerated()}">No refrigeration</span>
+                <p th:text = "'- responsible: ' + ${department.getResponsible().getFirstName()} + ' ' + ${department.getResponsible().getSurName()}"></p>
+                <img th:src="@{${department.getPhoto()}}" onerror="this.src='img/noimage.jpg'"/>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+11_searchDepartment.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search department</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2 th:text = "'We found this department: ' + ${department.getName()}"></h2>
+        <p th:if = "${department.isRefrigerated()}">Refrigerated department</p>
+        <p th:if = "!${department.isRefrigerated()}">No refrigeration</p>
+        <p th:text = "'Responsible: ' + ${department.getResponsible().getFirstName()} + ' ' + ${department.getResponsible().getSurName()}"></p>
+        <img th:src="@{${department.getPhoto()}}" onerror="this.src='img/noimage.jpg'"/>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+error.html
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h1 th:text = "${errorMessage}"></h1>
+
+
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+MainController.java
+
+
+
+package fact.it.supermarket.controller;
+
+
+import fact.it.supermarket.model.Customer;
+import fact.it.supermarket.model.Department;
+import fact.it.supermarket.model.Staff;
+import fact.it.supermarket.model.Supermarket;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
+//Raf Engelen
+//r0901812
+//1ITF02
+
+@Controller
+public class MainController {
+//  You will need these ArrayLists in part 3 of the project assignment.
+
+    private ArrayList<Staff> staffArrayList = new ArrayList<>();
+    private ArrayList<Customer> customerArrayList = new ArrayList<>();
+    private ArrayList<Supermarket> supermarketArrayList = new ArrayList<>();
+
+//    Write your code here
+
+    @PostConstruct
+    private void fillData(){
+
+        staffArrayList.addAll(fillStaffMembers());
+        customerArrayList.addAll(fillCustomers());
+        supermarketArrayList.addAll(fillSupermarkets());
+    }
+
+    @RequestMapping("/1_newCustomer")
+    public String newCustomer(Model model){
+
+        //supermarketArrayList meegeven naar 1_newCustomer.html
+        model.addAttribute("supermarketArrayList",supermarketArrayList);
+
+        return "1_newCustomer";
+    }
+
+    @RequestMapping("/submitNewCustomer")
+    public String submitNewCustomer(HttpServletRequest request, Model model){
+
+        //Data ophalen uit 1_newCustomer.html
+        String firstName = request.getParameter("firstName");
+        String surName = request.getParameter("surName");
+        int yearOfBirth = Integer.parseInt(request.getParameter("yearOfBirth"));
+
+        //customer maken en geboortejaar toevoegen
+        Customer customer = new Customer(firstName, surName);
+        customer.setYearOfBirth(yearOfBirth);
+
+        //ingegeven customer meegeven naar de volgende pagina
+        model.addAttribute("customer", customer);
+
+        //index van de gekozen supermakt halen
+        int supermarketIndex = Integer.parseInt(request.getParameter("supermarketIndex"));
+
+        //supermarkt uit ArrayList nemen en ingegeven customer toevoegen
+        Supermarket supermarket = supermarketArrayList.get(supermarketIndex);
+        supermarket.registerCustomer(customer);
+
+        //customer toevoegen aan customerArrayList
+        customerArrayList.add(customer);
+
+        return "2_welcomeCustomer";
+    }
+
+    @RequestMapping("/3_newStaff")
+    public String newStaff(){
+        return "3_newStaff";
+    }
+
+    @RequestMapping("/submitNewStaff")
+    public String submitNewStaff(HttpServletRequest request, Model model){
+
+        //Data halen uit 3_newStaff.html
+        String firstName = request.getParameter("firstName");
+        String surName = request.getParameter("surName");
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate employedSince = LocalDate.parse(request.getParameter("employedSince"), dtf);
+
+        boolean student = (request.getParameter("student") != null);
+
+        //Staff object aanmaken en data toevoegen
+        Staff staff = new Staff(firstName, surName);
+        staff.setStartDate(employedSince);
+        staff.setStudent(student);
+
+        //Nieuw staff object toevoegen aan staffArrayList en meegeven naar 4_welcomeStaff.html
+        staffArrayList.add(staff);
+
+        model.addAttribute(staff);
+
+        return "4_welcomeStaff";
+
+    }
+
+    @RequestMapping("/5_staffMembersList")
+    public String staffMembersList(Model model){
+
+        //staffArrayList meegeven naar volgende html pagina
+        model.addAttribute("staffArrayList", staffArrayList);
+        return "5_staffMembersList";
+    }
+
+    @RequestMapping("/6_customersList")
+    public String customersList(Model model){
+
+        //customerArrayList meegeven naar volgende html pagina
+        model.addAttribute("customerArrayList", customerArrayList);
+        return "6_customersList";
+    }
+
+    @RequestMapping("/7_newSupermarket")
+    public String newSupermarket(){
+        return "7_newSupermarket";
+    }
+
+    @RequestMapping("/submitNewSupermarket")
+    public String submitNewSupermarket(HttpServletRequest request, Model model){
+
+        //supermarkt naam nemen uit html en een nieuwe supermarkt aanmaken
+        String supermarketName = request.getParameter("supermarketName");
+        Supermarket supermarket = new Supermarket(supermarketName);
+
+        //nieuwe supermakt toevoegen aan supermarketArrayList en sturen naar volgende html pagina
+        supermarketArrayList.add(supermarket);
+
+        model.addAttribute("supermarketArrayList", supermarketArrayList);
+
+        return "8_supermarketList";
+    }
+
+    @RequestMapping("/8_supermarketList")
+    public String supermarketList(Model model){
+
+        //supermarketArrayList meegeven naar de volgende pagina
+        model.addAttribute("supermarketArrayList", supermarketArrayList);
+        return "8_supermarketList";
+    }
+
+    @RequestMapping("/9_newDepartment")
+    public String newDepartment(Model model){
+
+        //staffArrayList en supermarketArrayList sturen naar 9_newDepartment.html
+        model.addAttribute("supermarketArrayList", supermarketArrayList);
+        model.addAttribute("staffArrayList", staffArrayList);
+        return "9_newDepartment";
+    }
+
+    @RequestMapping("/submitNewDepartment")
+    public String submitNewDepartment(Model model, HttpServletRequest request){
+
+        //data uit html pagina opvragen
+        String departmentName = request.getParameter("departmentName");
+        String photo = request.getParameter("photo");
+        boolean refrigerated = (request.getParameter("refrigerated") != null);
+
+        int supermarketIndex = Integer.parseInt(request.getParameter("supermarketIndex"));
+        int responsibleIndex = Integer.parseInt(request.getParameter("responsibleIndex"));
+
+        //nakijken of de persoon iets uit de dropdownmenu's heeft gekozen. Indien dit niet het geval is, de correcte errormessage versturen.
+        if (supermarketIndex == -1 && responsibleIndex == -1){
+            model.addAttribute("errorMessage", "You did not select a supermarket and staff member!");
+            return "error";
+        }
+
+        if (supermarketIndex == -1){
+            model.addAttribute("errorMessage", "You did not select a supermarket!");
+            return "error";
+        }
+
+        if (responsibleIndex == -1){
+            model.addAttribute("errorMessage", "You did not select a staff member!");
+            return "error";
+        }
+
+        //supermarket en staff uit hun bijhorende lijsten nemen
+        Supermarket supermarket = supermarketArrayList.get(supermarketIndex);
+        Staff staff = staffArrayList.get(responsibleIndex);
+
+
+        //nieuwe department samenstellen met data gehaald uit de webpagina
+        Department department = new Department(departmentName);
+        department.setPhoto(photo);
+        department.setResponsible(staff);
+        department.setRefrigerated(refrigerated);
+
+        //de nieuw gemaakte department bij de supermarket zetten en de supermarket meegeven naar de volgende webpagina.
+        supermarket.addDepartment(department);
+
+        model.addAttribute("supermarket", supermarket);
+
+        return "10_departmentsOfSupermarket";
+    }
+
+    @RequestMapping("/10_departmentsOfSupermarket")
+    public String departmentsOfSupermarket(Model model, HttpServletRequest request){
+
+        //index uit webpagina namen en de bijhorende supermakt uit supermarketArrayList halen
+        int supermarketIndex = Integer.parseInt(request.getParameter("supermarketIndex"));
+        Supermarket supermarket = supermarketArrayList.get(supermarketIndex);
+
+        //supermarket meegeven naar 10_departmentOfSupermarket.html
+        model.addAttribute("supermarket", supermarket);
+        return "10_departmentsOfSupermarket";
+    }
+
+    @RequestMapping("/searchDepartment")
+    public String searchDepartment(Model model, HttpServletRequest request){
+
+        //departmentName uit het inputvak halen.
+        String departmentName = request.getParameter("departmentName");
+        Department department;
+
+        //nakijken of de department bij een van de supermakten uit de lijst hoort. Zo ja, wordt deze department naar de volgende pagina gestuurd.
+        for (Supermarket supermarket : supermarketArrayList) {
+            department = supermarket.searchDepartmentByName(departmentName);
+
+            if (department != null){
+                model.addAttribute("department", department);
+                return "11_searchDepartment";
+            }
+        }
+
+        //als de departmentName niet voorkomt bij de supermarkten, dan wordt er een errormessage gegeven.
+        model.addAttribute("errorMessage", "There is no department with the name '"+ departmentName + "'");
+        return "error";
+    }
+
+//  You wll need these methods in part 3 of the project assignment
+    private ArrayList<Staff> fillStaffMembers() {
+        ArrayList<Staff> staffMembers = new ArrayList<>();
+
+        Staff staff1 = new Staff("Johan", "Bertels");
+        staff1.setStartDate(LocalDate.of(2002, 5, 1));
+        Staff staff2 = new Staff("An", "Van Herck");
+        staff2.setStartDate(LocalDate.of(2019, 3, 15));
+        staff2.setStudent(true);
+        Staff staff3 = new Staff("Bruno", "Coenen");
+        staff3.setStartDate(LocalDate.of(1995,1,1));
+        Staff staff4 = new Staff("Wout", "Dayaert");
+        staff4.setStartDate(LocalDate.of(2002, 12, 15));
+        Staff staff5 = new Staff("Louis", "Petit");
+        staff5.setStartDate(LocalDate.of(2020, 8, 1));
+        staff5.setStudent(true);
+        Staff staff6 = new Staff("Jean", "Pinot");
+        staff6.setStartDate(LocalDate.of(1999,4,1));
+        Staff staff7 = new Staff("Ahmad", "Bezeri");
+        staff7.setStartDate(LocalDate.of(2009, 5, 1));
+        Staff staff8 = new Staff("Hans", "Volzky");
+        staff8.setStartDate(LocalDate.of(2015, 6, 10));
+        staff8.setStudent(true);
+        Staff staff9 = new Staff("Joachim", "Henau");
+        staff9.setStartDate(LocalDate.of(2007,9,18));
+        staffMembers.add(staff1);
+        staffMembers.add(staff2);
+        staffMembers.add(staff3);
+        staffMembers.add(staff4);
+        staffMembers.add(staff5);
+        staffMembers.add(staff6);
+        staffMembers.add(staff7);
+        staffMembers.add(staff8);
+        staffMembers.add(staff9);
+        return staffMembers;
+    }
+
+    private ArrayList<Customer> fillCustomers() {
+        ArrayList<Customer> customers = new ArrayList<>();
+        Customer customer1 = new Customer("Dominik", "Mioens");
+        customer1.setYearOfBirth(2001);
+        Customer customer2 = new Customer("Zion", "Noops");
+        customer2.setYearOfBirth(1996);
+        Customer customer3 = new Customer("Maria", "Bonetta");
+        customer3.setYearOfBirth(1998);
+        customers.add(customer1);
+        customers.add(customer2);
+        customers.add(customer3);
+        customers.get(0).addToShoppingList("Butter");
+        customers.get(0).addToShoppingList("Bread");
+        customers.get(1).addToShoppingList("Apple");
+        customers.get(1).addToShoppingList("Banana");
+        customers.get(1).addToShoppingList("Grapes");
+        customers.get(1).addToShoppingList("Oranges");
+        customers.get(2).addToShoppingList("Fish");
+
+        // ikzelf als customer:
+        Customer customer4 = new Customer("Raf", "Engelen");
+        customer4.setYearOfBirth(1998);
+        customers.add(customer4);
+        customers.get(3).addToShoppingList("Java coffee");
+        customers.get(3).addToShoppingList("Lemons");
+        customers.get(3).addToShoppingList("Lasagna");
+
+        return customers;
+    }
+
+    private ArrayList<Supermarket> fillSupermarkets() {
+        ArrayList<Supermarket> supermarkets = new ArrayList<>();
+        Supermarket supermarket1 = new Supermarket("Delhaize");
+        Supermarket supermarket2 = new Supermarket("Colruyt");
+        Supermarket supermarket3 = new Supermarket("Albert Heyn");
+        Department department1 = new Department("Fruit");
+        Department department2 = new Department("Bread");
+        Department department3 = new Department("Vegetables");
+        department1.setPhoto("/img/fruit.jpg");
+        department2.setPhoto("/img/bread.jpg");
+        department3.setPhoto("/img/vegetables.jpg");
+        department1.setResponsible(staffArrayList.get(0));
+        department2.setResponsible(staffArrayList.get(1));
+        department3.setResponsible(staffArrayList.get(2));
+        supermarket1.addDepartment(department1);
+        supermarket1.addDepartment(department2);
+        supermarket1.addDepartment(department3);
+        supermarket2.addDepartment(department1);
+        supermarket2.addDepartment(department2);
+        supermarket3.addDepartment(department1);
+        supermarket3.addDepartment(department3);
+        supermarkets.add(supermarket1);
+        supermarkets.add(supermarket2);
+        supermarkets.add(supermarket3);
+        return supermarkets;
+    }
+
+
+}
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------

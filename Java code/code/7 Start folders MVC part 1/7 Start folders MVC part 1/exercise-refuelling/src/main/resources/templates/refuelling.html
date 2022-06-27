@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Refuel your car</title>
+</head>
+<body>
+
+<p>You have a fuel consumption of <span th:text="${refuelling.getFuelConsumption()} + ' litre per 100 km'"></span></p>
+
+
+<p><a href="/">Back to homepage</a></p>
+</body>
+</html>

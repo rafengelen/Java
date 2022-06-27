@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our customers</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+    <main>
+        <h2>Our customers:</h2>
+
+        <ol>
+            <li th:each = "customer : ${customerArrayList}">
+                <span th:text="${customer.getFirstName()} + ' ' + ${customer.getSurName()}"/>
+                <ul>
+                    <li th:text="'year of birth: ' + ${customer.getYearOfBirth()}"></li>
+                    <li th:text="'cardnumber: ' + ${customer.getCardNumber()}"></li>
+                    <li> shopping list:
+                        <ul>
+                            <li th:each = "product : ${customer.getShoppingList()}">
+                                <span th:text = "${product}"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+    </main>
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>

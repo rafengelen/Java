@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Examples</title>
+</head>
+<body>
+
+<h3>These are all the currently registered dishes:</h3>
+
+<ul>
+    <li th:each="dish : ${dishList}"
+        th:text = "${dish.getName()} + ' (' + ${dish.getCalories()} +' calories)'"/>
+</ul>
+
+<p><a href="/">Back to the homepage</a></p>
+
+</body>
+</html>

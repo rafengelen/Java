@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new customer</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2>Submit new customer</h2>
+        <form action="submitNewCustomer">
+            <p>
+                <label for = "firstName">First name:</label>
+                <input type = "text" name = "firstName" id = "firstName" >
+            </p>
+
+            <p>
+                <label for = "surName">Surname:</label>
+                <input type = "text" name = "surName" id = "surName" >
+            </p>
+
+            <p>
+                <label for = "yearOfBirth">Year of birth:</label>
+                <input type = "text" name = "yearOfBirth" id = "yearOfBirth" >
+            </p>
+
+            <p th:each = "supermarket : ${supermarketArrayList}">
+                <input type="radio" name = "supermarketIndex" th:value = "${supermarketStat.index}" th:id = "${supermarketStat.index}" th:checked="${supermarketStat.index} == 0">
+                <label th:for = "${supermarketStat.index}" th:text = "${supermarket.getName()}"></label>
+            </p>
+
+            <p>
+                <input type = "submit" name = "submitNewCustomer" value = "Continue and generate cardnumber">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarkets</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+    <main>
+        <h2>Supermarkets (and number of departments):</h2>
+
+        <ul>
+            <li th:each = "supermarket : ${supermarketArrayList}">
+                <a th:href = "@{/10_departmentsOfSupermarket(supermarketIndex = ${supermarketStat.index})}"
+                   th:text = "${supermarket.getName()} + ' (' + ${supermarket.getNumberOfDepartments()} + ') managed by ' +${supermarket.getGeneralManager().getFirstName()} + ' ' + ${supermarket.getGeneralManager().getSurName()}"></a>
+            </li>
+        </ul>
+
+    </main>
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>

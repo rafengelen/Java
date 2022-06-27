@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raf Engelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search department</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+
+<!--
+Raf Engelen
+r0901812
+1ITF02
+ -->
+
+<body>
+<div>
+    <header>
+        <p><span>Raf Engelen</span><span>r0901812</span><span>1ITF02</span></p>
+    </header>
+
+    <main>
+        <h2 th:text = "'We found this department: ' + ${department.getName()}"></h2>
+        <p th:if = "${department.isRefrigerated()}">Refrigerated department</p>
+        <p th:if = "!${department.isRefrigerated()}">No refrigeration</p>
+        <p th:text = "'Responsible: ' + ${department.getResponsible().getFirstName()} + ' ' + ${department.getResponsible().getSurName()}"></p>
+        <img th:src="@{${department.getPhoto()}}" onerror="this.src='img/noimage.jpg'"/>
+    </main>
+
+    <footer>
+        <a href="/">Back to homepage</a>
+    </footer>
+</div>
+</body>
+</html>
