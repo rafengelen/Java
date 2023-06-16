@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/searchTitle">
+    <label for="title">(Part of) title: </label>
+    <input type="text" name="title" id="title">
+    <button type="submit">Search on title</button>
+</form>
+<form action="/searchTheme">
+    <label for="theme">Choose your theme: </label>
+    <select name="theme" id="theme" >
+        <option value="0">Choose your theme here</option>
+        <option th:each="theme : ${themes}" th:value="${theme}" th:text="${theme}"></option>
+    </select>
+    <button type="submit">Search on theme</button>
+</form>
+<p></p>
+</body>
+</html>

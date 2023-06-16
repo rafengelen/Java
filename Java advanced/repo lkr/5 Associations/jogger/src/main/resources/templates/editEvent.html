@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/processEditEvent(id=${event.getId()})}" method="post">
+    <p><label for="name">name: </label><input id="name" th:value="${event.getName()}" name="name" type="text"></p>
+    <p><label for="year">year: </label><input th:value="${event.getYear()}" id="year" name="year" type="text"></p>
+    <p><label for="location">location: </label><input id="location" th:value="${event.getLocation()}" name="location" type="text"></p>
+
+    <p th:each="club : ${clubList}">
+        <label th:for="${club.getId()}"
+               th:text="${club.getName()}"></label>
+        <input type="radio" name="clubId"
+               th:value="${club.getId()}"
+               th:id="${club.getId()}"
+               th:checked="${club.getId()} == ${event.getClub().getId()}"/>
+    </p>
+
+    <button type="submit">Save</button>
+</form>
+<a href="/">Home</a>
+</body>
+</html>

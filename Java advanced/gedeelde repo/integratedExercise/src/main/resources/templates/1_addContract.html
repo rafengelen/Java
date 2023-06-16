@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Add Contract</title>
+</head>
+<body>
+<h1 th:text="'Create Rental Contract for property '+${property.toString()}"><span></span></h1>
+<form th:action="@{/processAddContract(propertyId=${property.getId()})}" method="post">
+    <p>
+        <label for="tenantId"></label>
+        <select name="tenantId" id="tenantId">
+            <option value="-1">Choose the tenant here</option>
+            <option th:each="tenant : ${tenantList}" th:value="${tenant.getId()}"
+                    th:text="${tenant.getName}"></option>
+        </select>
+    </p>
+    <p>
+        <label for="rentalPrice">Rental price: </label>
+        <input name="rentalPrice" id="rentalPrice" type="text">
+    </p>
+    <button type="submit">Add Contract</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Course information</title>
+</head>
+<body>
+    <h1>Course</h1>
+    <p th:text="'Name: ' + ${course.getName()}"></p>
+    <p th:text="'Location: ' + ${course.getLocation()}"></p>
+    <p ></p>
+
+    <div th:switch="${course.isWeekly()}">
+        <p th:case="${true}" th:text="'This is a weekly course, starting on ' + ${formatter.format(course.getStartDate())} +' running for ' +${course.getNumberOfDays()+' weeks.'}"></p>
+        <p th:case="${false}" th:text="'This course starts on ' + ${formatter.format(course.getStartDate())} +' running for ' +${course.getNumberOfDays()+' days.'}"></p>
+    </div>
+
+
+    <p><a href="/">Back</a></p>
+</body>
+</html>

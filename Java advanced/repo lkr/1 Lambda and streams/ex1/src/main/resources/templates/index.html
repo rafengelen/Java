@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/prime">
+    <p>This page can be used to find all the primes up to a specific value!</p>
+    <p>
+        <label for="number" th:text="'Enter the desired value:'"></label>
+        <input type="number" name="number" id="number"/>
+    </p>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

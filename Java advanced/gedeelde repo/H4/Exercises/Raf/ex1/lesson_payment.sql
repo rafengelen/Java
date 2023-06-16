@@ -1,0 +1,3 @@
+
+
+INSERT INTO `payment` VALUES ('CashPayment',1,128,'Tim Belders','€',NULL,NULL,NULL,'Jef Volders',NULL,NULL),('CashPayment',2,505.2,'Kenny Opdebeeck','$',NULL,NULL,NULL,'Rina Vanmechelen',NULL,NULL),('CashPayment',3,54,'Eric Vrients','€',NULL,NULL,NULL,'Luc Vrients',NULL,NULL),('CashPayment',4,17,'Pieter Van Gaelen','€',NULL,NULL,NULL,'Hanne Vos',NULL,NULL),('VisaPayment',5,15,'Proximus','€','001-1099285-60','Lies Van Gorp',NULL,NULL,'5312456287459630','05/2015'),('VisaPayment',6,151,'Telenet','€','001-125849285-60','Jan Van Gorp',NULL,NULL,'456213658974522','05/2022'),('AmexPayment',7,500,'Jan Janssen','$','089-492851258-21','Els','1234',NULL,NULL,NULL);

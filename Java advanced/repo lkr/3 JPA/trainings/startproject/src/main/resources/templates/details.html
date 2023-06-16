@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title th:text="${training.getTitle()}"></title>
+</head>
+<body>
+<h1 th:text="${training.getTitle()}+ ' (' + ${training.getCode()}+ ')'"></h1>
+<p th:text="${training.getTheme()}"></p>
+<p th:text="${training.getDuration()} + 'days'"></p>
+<p th:text="'Maximum '+${training.getTheme()} + ' participants'"></p>
+
+<p><a href="/listOfTrainings">Back to List</a><a href="/">Home</a></p>
+</body>
+</html>

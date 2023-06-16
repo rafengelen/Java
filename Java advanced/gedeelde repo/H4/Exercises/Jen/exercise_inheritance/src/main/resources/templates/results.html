@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li th:each="payment : ${paymentList}">
+        <span th:text="${payment.getBeneficiary()} + ' ' + ${payment.getAmount()} + ${payment.getCurrency()}"/>
+        <span th:if="${payment.class.simpleName == 'CashPayment'}"
+        th:text="' is a Cash Payment from ' + ${payment.getName()}"/>
+    </li>
+</ol>
+
+<p>
+    <a href="/">Home</a>
+</p>
+</body>
+</html>

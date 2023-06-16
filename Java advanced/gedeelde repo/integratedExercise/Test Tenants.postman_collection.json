@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "266e91c9-457e-4427-9c62-f45af9aa9d61",
+		"name": "Test Tenants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testIncomeLessThan5000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var expectedJsonBody =\r",
+							"[\r",
+							"    \"Trump with income 3000.0\",\r",
+							"    \"Gates with income 4000.0\"\r",
+							"]\r",
+							"\r",
+							"responseArray = JSON.parse(responseBody);\r",
+							"pm.test('Correct resultset', () => {\r",
+							"    pm.expect(responseArray).to.eql(expectedJsonBody);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "5000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/select",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"select"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testIncomeLessThan10000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var expectedJsonBody =\r",
+							"[\r",
+							"    \"Trump with income 3000.0\",\r",
+							"    \"Gates with income 4000.0\",\r",
+							"    \"Bezos with income 7000.0\"\r",
+							"]\r",
+							"\r",
+							"responseArray = JSON.parse(responseBody);\r",
+							"pm.test('Correct resultset', () => {\r",
+							"    pm.expect(responseArray).to.eql(expectedJsonBody);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "10000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/select",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"select"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testChangeIncomeId2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var expectedJsonBody =\r",
+							"{\r",
+							"    \"id\": 2,\r",
+							"    \"name\": \"Gates\",\r",
+							"    \"income\": 12000.0\r",
+							"}\r",
+							"\r",
+							"responseArray = JSON.parse(responseBody);\r",
+							"pm.test('Correct resultset', () => {\r",
+							"    pm.expect(responseArray).to.eql(expectedJsonBody);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "12000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testChangeIncomeId99",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "12000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testIncomeLessThan10000Again",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var expectedJsonBody =\r",
+							"[\r",
+							"    \"Trump with income 3000.0\",\r",
+							"    \"Bezos with income 7000.0\"\r",
+							"]\r",
+							"\r",
+							"responseArray = JSON.parse(responseBody);\r",
+							"pm.test('Correct resultset', () => {\r",
+							"    pm.expect(responseArray).to.eql(expectedJsonBody);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "10000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/select",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"select"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testDelete3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"DELETE-request is successful\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"2\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testDelete3 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"2\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tenants/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tenants",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

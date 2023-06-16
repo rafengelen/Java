@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li th:each="contract : ${contractList}">
+        <span th:text="'Property: '+${contract.property.getCode()}"></span><br>
+        <span th:text="'Tenant: '+${contract.tenant.getName()}"></span><br>
+        <span th:text="'Rental price: '+${contract.getRentalPrice()}"></span><br>
+        <span th:text="${contract.getActivity()}"></span>
+    </li>
+</ol>
+<a href="/">Home</a>
+</body>
+</html>

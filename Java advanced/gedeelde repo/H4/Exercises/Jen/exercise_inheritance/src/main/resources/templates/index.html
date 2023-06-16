@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/results"><button>Results</button></a>
+</p>
+<p>
+    <a href="/resultsAscAmount"><button>Results ordered by amount</button></a>
+</p>
+<p>
+    <a href="/resultsCash"><button>Cash payments</button></a>
+</p>
+<p>
+    <a href="/resultsElectronic"><button>Electronic payments</button></a>
+</p>
+
+<form action="/resultsFilterAmount">
+    <p>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount">
+    </p>
+    <p>
+        <input type="submit" value="Results above a certain amount">
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Edit department</title>
+</head>
+<body>
+<h1>Edit department</h1>
+<form th:action="@{/processEditDepartment(departmentId=${department.getId()})}" method="post">
+    <p>
+        <label for="name">Name: </label>
+        <input th:value="${department.getName()}" name="name" id="name" type="text">
+    </p>
+    <p>
+        <label for="code">Code: </label>
+        <input th:value="${department.getCode()}" id="code" name="code" type="text">
+    </p>
+    <p>
+        <label for="companyId">Company: </label>
+        <select name="companyId" id="companyId">
+
+            <option th:each="company : ${companyList}"
+                    th:value="${company.getId()}"
+                    th:text="${company.getName()}"
+                    th:selected="${company.getId() == department.getCompany().getId()}"></option>
+        </select>
+    </p>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

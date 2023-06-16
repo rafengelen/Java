@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cf773e5-0eae-4db0-9a3c-566d4d9c184d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Thymeleaf HTML file" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="283Z9u9NEhEl5xZdZcS7Z1qsygc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christine\Documents\02_Java advanced 2022\Les 3 JPA\exampleProject-jpa\src\main\resources\templates" />
+      <recent name="C:\Users\Christine\Documents\02_Java advanced 2022\Les 3 JPA\exampleProject-jpa\src\main\java\fact\it\exampleprojectjpa" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fact.it.exampleprojectjpa.repository" />
+      <recent name="fact.it.exampleprojectjpa.model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ExampleProjectJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="startproject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fact.it.startproject.startprojectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cf773e5-0eae-4db0-9a3c-566d4d9c184d" name="Changes" comment="" />
+      <created>1650447086236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650447086236</updated>
+      <workItem from="1650447088234" duration="6235000" />
+      <workItem from="1650462035776" duration="768000" />
+      <workItem from="1650462841785" duration="286000" />
+      <workItem from="1650463162026" duration="336000" />
+      <workItem from="1650463650108" duration="1166000" />
+      <workItem from="1650546801364" duration="3976000" />
+      <workItem from="1654885451355" duration="232000" />
+      <workItem from="1654885700001" duration="9000" />
+      <workItem from="1654885720416" duration="45000" />
+      <workItem from="1683107304788" duration="64000" />
+      <workItem from="1686730361730" duration="5206000" />
+      <workItem from="1686746556762" duration="99000" />
+      <workItem from="1686831952597" duration="159000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

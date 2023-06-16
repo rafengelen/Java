@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="club : ${clubList}">
+        <h2 th:text="${club.getName()}"></h2>
+        <h3>Joggers</h3>
+        <ul>
+            <li th:each="jogger : ${club.getMemberList()}"
+            th:text="${jogger.getName()}"></li>
+        </ul>
+        <h3>Events</h3>
+        <ul>
+            <li th:each="event : ${club.getEventList()}"
+            th:text="${event.getName()}"></li>
+        </ul>
+    </li>
+</ul>
+
+<p><a href="/">Home</a></p>
+</body>
+</html>
